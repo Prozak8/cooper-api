@@ -4,7 +4,7 @@ Shoulda::Matchers.configure do |config|
         with.library :rails
     end
 end
-
-Rspec.configure do |config|
+  
+RSpec.configure do |config|
     config.include(Shoulda::Matchers::ActiveRecord, type: :model)
 end
