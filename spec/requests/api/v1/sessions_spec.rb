@@ -36,7 +36,7 @@ RSpec.describe 'Sessions', type: :request do
                                                 }, headers: headers
 
             expect(response_json['errors'])
-                .to eq ['Invalid login credentials. Please try again']
+                .to eq ['Invalid login credentials. Please try again.']
 
             expect(response.status).to eq 401
         end
