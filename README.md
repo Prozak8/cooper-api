@@ -1,24 +1,3 @@
-# README
+#Questions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Note: Examine all the specs in the 2 code blocks above before adding them to your own specs. If you have some previous experience using rspec , you'll notice that they are a bit different. In what way? What new ways of writing specs did we use here and are there any matchers used in the examples that you have not seen before?
