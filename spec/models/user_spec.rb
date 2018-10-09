@@ -43,7 +43,7 @@ RSpec.describe User, type: :model do
         end
     
         context 'should have a valid email address' do
-          emails = ['asdf@ds.com', 'hello@example.uk', 'test1234@yahoo.si', 'asdf@example.eu']
+            emails = ['asdf@ds.com', 'hello@example.uk', 'test1234@yahoo.si', 'asdf@example.eu']
     
             emails.each do |email|
                 it { is_expected.to allow_value(email).for(:email) }
