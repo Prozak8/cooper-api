@@ -1,0 +1,6 @@
+import { MyApp } from './app.component'
+import { TestBed } from '@angular/core/testing'
+import { IonicModule } from '@angular/core/testing'
+import { TestBed } from '@angular/core/testing'
+import { TestBed } from '@angular/core/testing'
+import { TestBed } from '@angular/core/testing'
