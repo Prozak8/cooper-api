@@ -4,6 +4,7 @@ import { IonicModule, Platform, NavController } from "ionic-angular";
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { PlatformMock, StatusBarMock, SplashScreenMock, NavControllerMock } from "ionic-mocks";
+import { iterateListLike } from "@angular/core/src/change_detection/change_detection_util";
 
 describe("HomePage", () => {
   let homepage;
@@ -43,5 +44,9 @@ describe("HomePage", () => {
     homepage.calculate()
 
     expect(homepage.calculate).toHaveBeenCalled(); 
+  });
+
+  it("should have user array", () => {
+    expect(homepage.user).toEqual({});
   });
 });
