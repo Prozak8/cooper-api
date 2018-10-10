@@ -1,5 +1,7 @@
 import { CooperProvider } from './../../providers/cooper/cooper'
 import { PersonProvider } from './../../providers/person/person'
+import { TestBed, inject } from '@angular/core/testing';
+
 
 describe("Person Component", () => {
     let personProvider, cooperProvider;
@@ -15,7 +17,7 @@ describe("Person Component", () => {
 
     it("should create the person provider", () => {
         expect(personProvider).toBeTruthy();
-        expect(PersonProvider instanceof PersonProvider).toEqual(true);
+        expect(personProvider instanceof PersonProvider).toEqual(true);
     });
 
     it('doassessment should be defined', () => {
@@ -28,6 +30,10 @@ describe("Person Component", () => {
     });
 
     it('cooper provider should be called', () => {
+        personProvider.age = 25;
+        personProvider.gender = 'female ';
+        spyOn(cooperProvider, 'assess');
+        
         personProvider.doAssessment(2200);
 
         expect(cooperProvider.assess).toHaveBeenCalled();
