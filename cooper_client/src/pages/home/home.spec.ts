@@ -4,10 +4,9 @@ import { IonicModule, Platform, NavController } from "ionic-angular";
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { PlatformMock, StatusBarMock, SplashScreenMock, NavControllerMock } from "ionic-mocks";
-import { iterateListLike } from "@angular/core/src/change_detection/change_detection_util";
 
 describe("HomePage", () => {
-  let homepage;
+  let homepage, fixture;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -34,10 +33,6 @@ describe("HomePage", () => {
     expect(homepage instanceof HomePage).toEqual(true);
   });
 
-  it('should have user default values', () => {
-    expect(homepage.user).toEqual({ distance: 1000, age: 20 });
-  });
-
   it('should have calculate function', () => {
     spyOn(homepage, 'calculate');
 
@@ -46,7 +41,12 @@ describe("HomePage", () => {
     expect(homepage.calculate).toHaveBeenCalled(); 
   });
 
-  it("should have user array", () => {
-    expect(homepage.user).toEqual({});
+  it("should have user array default values", () => {
+    expect(homepage.user).toEqual({ distance: 1000, age: 20 });
+  })
+
+  it("should have calculate function", () => {
+    expect(homepage.calculate).toBeTruthy();
   });
+
 });

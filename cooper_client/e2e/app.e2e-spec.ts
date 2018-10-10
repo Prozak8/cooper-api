@@ -1,5 +1,4 @@
 import { Page } from './app.po';
-import { ExpectedConditions } from 'protractor';
 
 describe('App', () => {
   let page: Page;
